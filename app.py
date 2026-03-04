@@ -63,7 +63,7 @@ if st.button("Predict Churn Status"):
         prediction = result["prediction"]
         
         if prediction == "YES":
-            st.error(f"Prediction: **High Risk of Churn** (Model: {result['model']})")
+            st.error(f"Prediction: **High Risk of Churn** Customer might not stay!!(Model: {result['model']})")
         else:
             st.success(f"Prediction: **Customer Likely to Stay** (Model: {result['model']})")
             

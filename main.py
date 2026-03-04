@@ -48,7 +48,7 @@ def predict(data:CustomerData):
         ]]
         )
 
-        x_scaled=scaler.fit_transform(x)
+        x_scaled=scaler.transform(x)
         pred=knn.predict(x_scaled)[0]
 
         return {
@@ -75,7 +75,7 @@ def predict_logistic(data:CustomerData):
                 data.StreamingMovies
         ]])
 
-        x_scaled=scaler.fit_transform(x)
+        x_scaled=scaler.transform(x)
         pred=log_reg.predict(x_scaled)[0]
 
         return {
