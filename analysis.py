@@ -25,16 +25,24 @@ sns.heatmap(numeric_df.corr(), annot=True, cmap="coolwarm", fmt=".2f")
 plt.title("Correlation heatmap")
 plt.show()
 
-#Bar graph
+# Bar graph
 plt.figure(figsize=(10, 6))
-sns.countplot(data=df, x='Contract', hue='Churn', palette='viridis')
-plt.title('Churn Rate by Contract Type')
-plt.xlabel('Contract Type')
-plt.ylabel('Number of Customers')
+sns.countplot(data=df, x="Contract", hue="Churn", palette="viridis")
+plt.title("Churn Rate by Contract Type")
+plt.xlabel("Contract Type")
+plt.ylabel("Number of Customers")
 plt.show()
 
-#KDE plot
+# KDE plot
 plt.figure(figsize=(10, 6))
-sns.kdeplot(data=df, x='MonthlyCharges', hue='Churn', fill=True, common_norm=False, palette='magma')
-plt.title('Distribution of Monthly Charges by Churn Status')
+sns.kdeplot(
+    data=df,
+    x="MonthlyCharges",
+    hue="Churn",
+    fill=True,
+    common_norm=False,
+    palette="magma",
+    color="red",
+)
+plt.title("Distribution of Monthly Charges by Churn Status")
 plt.show()
